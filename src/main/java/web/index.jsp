@@ -9,13 +9,22 @@
 <html>
 <head>
   <title>$Title$</title>
+  <link href="/web_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="JSP/Select/hello.jsp" method="POST">
-  colomn Name: <input type="text" name="first_col">
-  <br />
-  colomn Name: <input type="text" name="second_col" />
-  <input type="submit" value="Submit" />
-</form>
+<header></header>
+<nav>
+  <a href="/web_war_exploded/select">Select</a>
+  <a href="/web_war_exploded/loggin">Loggin</a>
+</nav>
+<section>
+  <form action="JSP/Select/hello.jsp" method="POST">
+    colomn Name: <input type="text" name="first_col">
+    <br />
+    colomn Name: <input type="text" name="second_col" />
+    <input type="submit" value="Submit" />
+  </form>
+</section>
+<footer></footer>
 </body>
 </html>

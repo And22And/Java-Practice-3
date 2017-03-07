@@ -17,9 +17,9 @@ public class Loggin extends HttpServlet{
                 "<head>\n" +
                 "    <title>Loggin</title>\n" +
                 "<link href=\"/WebServlets_war_exploded/CSS/loggin.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-                "    <script src = \"/WebServlets_war_exploded/JS/jquery-3.1.1.js\"></script>\n" +
-                "    <script src = \"/WebServlets_war_exploded/JS/Loggin.js\"></script>\n" +
-                "    <script src = \"/WebServlets_war_exploded/JS/AJAX.js\"></script>\n" +
+                "    <script src = \"/web_war_exploded/JS/jquery-3.1.1.js\"></script>\n" +
+                "    <script src = \"/web_war_exploded/JS/Loggin.js\"></script>\n" +
+                "    <script src = \"/web_war_exploded/JS/AJAX.js\"></script>\n" +
                 "</head>\n" +
                 "<body>");
 

@@ -9,8 +9,8 @@
 <html>
 <head>
     <title>Table</title>
-    <link href="/WebServlets_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
-    <link href="/WebServlets_war_exploded/CSS/tableForDB.css" rel="stylesheet" type="text/css">
+    <link href="/web_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
+    <link href="/web_war_exploded/CSS/tableForDB.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <table>

@@ -9,10 +9,10 @@
 <html>
 <head>
     <title>Select</title>
-    <link href="/WebServlets_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
-    <link href="/WebServlets_war_exploded/CSS/select.css" rel="stylesheet" type="text/css">
-    <script src = "/WebServlets_war_exploded/JS/jquery-3.1.1.js"></script>
-    <script src = "/WebServlets_war_exploded/JS/DBSelect.js"></script>
+    <link href="/web_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
+    <link href="/web_war_exploded/CSS/select.css" rel="stylesheet" type="text/css">
+    <script src = "/web_war_exploded/JS/jquery-3.1.1.js"></script>
+    <script src = "/web_war_exploded/JS/DBSelect.js"></script>
 </head>
 <body>
 <header>Cool data base</header>
