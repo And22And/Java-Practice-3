@@ -1,0 +1,50 @@
+#selectform{
+
+}
+
+.selectRows{
+    margin: 5px;
+    padding-left: 2%;
+    border: 1px solid black;
+}
+
+.selectTable{
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.allias{
+
+}
+
+.Where{
+    margin: 5px;
+    padding-left: 2%;
+    border: 1px solid black;
+}
+
+.Order{
+    margin: 5px;
+    border: 1px solid black;
+}
+
+.DBtable{
+
+}
+
+.DBcolomn{
+
+}
+
+.DBwhere{
+
+}
+
+.DBorder{
+
+}
+
+select{
+    min-width: 20%;
+    max-width: 20%;
+}
