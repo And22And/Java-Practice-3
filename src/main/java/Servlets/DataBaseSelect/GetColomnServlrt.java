@@ -3,6 +3,7 @@ package Servlets.DataBaseSelect;
 import Model.DataBase;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import java.io.PrintWriter;
 /**
  * Created by Клиент on 04.02.2017.
  */
+@WebServlet(name = "getColumn", urlPatterns = "/getColomn")
 public class GetColomnServlrt extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

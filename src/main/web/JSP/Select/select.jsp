@@ -49,7 +49,8 @@
             <div class="selectRows">
                 <p>Rows</p>
                 <p>
-                    <select name="a1-row" class="DBcolomn"><%//nameDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+                    <select name="a1-colomn" class="DBcolomn">
+                        <option>*</option><%
                         db.byRequest("select column_name from user_tab_columns where table_name = '"  + firstTable + "'");
                         while (db.rsNext()) {
                     %>
