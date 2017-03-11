@@ -19,15 +19,7 @@ public class GetColomnServlrt extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
-        Cookie[] cookie = req.getCookies();
-        String table = null;
-        for (int i = 0; i < cookie.length; i++) {
-            switch (cookie[i].getName()) {
-                case "Table": {
-                    table = cookie[i].getValue();
-                }
-            }
-        }
+        String table = req.getParameter("table");
         PrintWriter pw = resp.getWriter();
         DataBase db = new DataBase("user1", "user");
         db.byRequest("select column_name from user_tab_columns where table_name = '" + table + "'");

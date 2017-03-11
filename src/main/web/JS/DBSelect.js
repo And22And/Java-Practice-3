@@ -3,8 +3,13 @@ var tableCopy;
 var selectWhere;
 
 function loadContent() {
-    document.cookie = "Table=" + $(this).val() + ";";    
-    $($(this).closest(".selectTable").find(".DBcolomn")[0]).load("getColomn");
+    $($(this).closest(".selectTable").find(".DBcolomn")[0]).load("getColomn", "table=" + $(this).val());
+    $(this).closest(".selectTable").find(".selectRows").find("input[value='-'][type='button']").each(function (ind, elem) {
+        elem.parentNode.remove();
+    });
+    $(this).closest(".selectTable").find(".Where").find("input[value='-'][type='button']").each(function (ind, elem) {
+        elem.parentNode.remove();
+    });
 }
 
 function addColomn(cur) {
