@@ -8,22 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>$Title$</title>
+  <title>Main page</title>
   <link href="/web_war_exploded/CSS/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <header></header>
-<nav>
-  <a href="/web_war_exploded/select">Select</a>
-  <a href="/web_war_exploded/loggin">Loggin</a>
-</nav>
+<jsp:include page="JSP/Content/menu.jsp"/>
 <section>
-  <form action="JSP/Select/hello.jsp" method="POST">
-    colomn Name: <input type="text" name="first_col">
-    <br />
-    colomn Name: <input type="text" name="second_col" />
-    <input type="submit" value="Submit" />
-  </form>
+
 </section>
 <footer></footer>
 </body>

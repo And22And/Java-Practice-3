@@ -16,12 +16,7 @@
 </head>
 <body>
 <header>Cool data base</header>
-<nav>
-    <p>Menu</p>
-    <ul>
-
-    </ul>
-</nav>
+<jsp:include page="../Content/menu.jsp"/>
 <section>
     <form action="showTable.jsp" method="POST" id="selectform">
         <div class = "selectTable">

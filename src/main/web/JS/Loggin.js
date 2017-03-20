@@ -1,5 +1,5 @@
 function send(req) {
-    req.open("POST", "chekLoggin", true);
+    req.open("POST", "checkLoggin", true);
     req.send("name="+$("#userName").val() + " pass="+$("#userPass").val());
 }
 

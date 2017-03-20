@@ -9,13 +9,17 @@
 <html>
 <head>
     <title>Loggin</title>
+    <link href="/web_war_exploded/CSS/loggin.css" rel="stylesheet" type="text/css">
+    <script src = "/web_war_exploded/JS/jquery-3.1.1.js"></script>
+    <script src = "/web_war_exploded/JS/Loggin.js"></script>
+    <script src = "/web_war_exploded/JS/AJAX.js"></script>
 </head>
 <body>
-    <form>
-        <input type="text" id="userName">
-        <input type="password" id="userPass">
-        <input type="button" onclick="checkUser()">
-        <div id = "error"></div>
-    </form>
+<form>
+      <p><input type="text" id="userName"></p>
+      <p><input type="password" id="userPass"></p>
+      <p><input type="button" onclick="sendRequest()" value="Loggin"></p>
+      <div id = "error"></div>
+  </form>
 </body>
 </html>

@@ -15,7 +15,7 @@ import java.io.PrintWriter;
  * Created by Клиент on 22.02.2017.
  */
 
-@WebServlet(name = "ChekLoggin", urlPatterns = "/check.loggin")
+@WebServlet(name = "ChekLoggin", urlPatterns = "/checkLoggin")
 public class ChekLoggin extends HttpServlet {
 
     static final String namePart = "name=";
@@ -24,14 +24,10 @@ public class ChekLoggin extends HttpServlet {
         public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             BufferedReader br = req.getReader();
             String body = br.readLine();
-            System.out.println(body);
-            String name = body.substring(body.indexOf(namePart)+namePart.length(), body.indexOf(" "));
+            String name = body.substring(body.indexOf(namePart)+namePart.length(), body.indexOf(passPart));
             String pass = body.substring(body.indexOf(passPart)+passPart.length());
-            System.out.println(name);
-            System.out.println(pass);
-            System.out.println(Code.md5Custom(pass));
+            System.out.println(Code.md5Custom(pass).length());
             PrintWriter pw = resp.getWriter();
             pw.write("False");
         }
-
     }
