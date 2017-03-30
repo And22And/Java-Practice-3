@@ -31,7 +31,7 @@
                             String firstTable = null;
                             if(db.rsNext()) {
                                 firstTable = db.getRsString(1);
-                    %><option><%=db.getRsString(1)%></option>;
+                    %><option value=<%=db.getRsString(1)%> ><%=db.getRsString(1)%></option>;
                     <%}
                         while (db.rsNext()) {
                     %>
@@ -39,19 +39,21 @@
                     <%
                         }
                     %></select>
-                <input type="text" hidden value="a1" class="allias" name = "allias">
+                <p>Allias : <input type="text"  value="a1" class="allias" name = "allias"></p>
+                <input type="text" hidden value="a1" class="uniqName" name = "uniqName">
             </p>
-            <div class="selectRows">
+            <div class="selectColomns">
                 <p>Rows</p>
                 <p>
                     <select name="a1-colomn" class="DBcolomn">
-                        <option>*</option><%
+                        <option value='*'>*</option><%
                         db.byRequest("select column_name from user_tab_columns where table_name = '"  + firstTable + "'");
                         while (db.rsNext()) {
                     %>
-                        <option><%=db.getRsString(1)%></option>
+                        <option  value=<%=db.getRsString(1)%> ><%=db.getRsString(1)%></option>
                         <%}
                         %></select>
+                    <%--<input type="button" value="-" onclick="deleteThis(this)">--%>
                     <%} catch (Exception e) {
                         e.printStackTrace();
                     } finally {

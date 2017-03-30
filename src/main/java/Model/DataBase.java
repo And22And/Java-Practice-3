@@ -7,9 +7,9 @@ import java.util.Locale;
 /**
  * Created by Клиент on 04.02.2017.
  */
-public class DataBase {
+public class DataBase implements DataAccessModel{
     Connection con;
-    Statement stmt;
+    PreparedStatement stmt;
     ResultSet rs;
 
     public DataBase(String user, String pass) {
@@ -21,7 +21,6 @@ public class DataBase {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             String url = "jdbc:oracle:thin:@//localhost:1521/XE";
             this.con = DriverManager.getConnection(url, user, pass);
-            this.stmt =  this.con.createStatement();
         } catch (Exception e) {
             close();
             e.printStackTrace();
@@ -30,7 +29,8 @@ public class DataBase {
 
     public void byRequest(String request) {
         try {
-            this.rs =  this.stmt.executeQuery(request);
+            this.stmt =  this.con.prepareStatement(request);
+            this.rs =  this.stmt.executeQuery();
         } catch (SQLException e) {
             close();
             e.printStackTrace();
@@ -71,6 +71,17 @@ public class DataBase {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public int getColomnNumber(){
+        int count = 0;
+        try {
+            count = stmt.getMetaData().getColumnCount();
+        } catch (SQLException e) {
+            close();
+            e.printStackTrace();
+        }
+        return count;
     }
 
 //    public static void main(String[] args) {

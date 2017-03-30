@@ -1,16 +1,18 @@
-function send(req) {
-    req.open("POST", "checkLoggin", true);
-    req.send("name="+$("#userName").val() + " pass="+$("#userPass").val());
-}
-
-function ifError(req) {
-    $("#error").text(req.status + ': ' + req.statusText);
-}
-
-function afterSend(req) {
-    if(req.responseText == "OK") {
-        location.reload();
-    } else {
-        $("#error").text(req.responseText);
-    }
+function sendRequest() {
+    $.ajax({
+        type:"POST",
+        url:"/web_war_exploded/checkLoggin",
+        data:"name="+$("#userName").val() + " pass="+$("#userPass").val(),
+        cache: false,
+        success:function (result) {
+            if(result != "Ok") {
+                $("#error").html(result);
+            }else {
+                location.reload();
+            }
+        },
+        error: function(xhr) {
+            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        }
+    })
 }

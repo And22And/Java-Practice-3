@@ -26,7 +26,7 @@ public class ChekLoggin extends HttpServlet {
             String body = br.readLine();
             String name = body.substring(body.indexOf(namePart)+namePart.length(), body.indexOf(passPart));
             String pass = body.substring(body.indexOf(passPart)+passPart.length());
-            System.out.println(Code.md5Custom(pass).length());
+            System.out.println(Code.md5Custom(pass));
             PrintWriter pw = resp.getWriter();
             pw.write("False");
         }

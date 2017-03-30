@@ -12,8 +12,7 @@
     <link href="/web_war_exploded/CSS/loggin.css" rel="stylesheet" type="text/css">
     <script src = "/web_war_exploded/JS/jquery-3.1.1.js"></script>
     <script src = "/web_war_exploded/JS/Loggin.js"></script>
-    <script src = "/web_war_exploded/JS/AJAX.js"></script>
-</head>
+   </head>
 <body>
 <form>
       <p><input type="text" id="userName"></p>
